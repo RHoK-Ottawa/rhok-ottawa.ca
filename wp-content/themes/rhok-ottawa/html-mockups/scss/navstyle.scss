@@ -1,0 +1,35 @@
+nav a{color:$light; text-transform: uppercase;
+
+	&.rohklink{text-transform: capitalize; 
+	 span{color:$color-pri; text-transform: uppercase;}}
+	}
+
+nav {font-family: $font-sec;}
+
+.nav-pri{
+	float:left; position:fixed; top:0; left:0; z-index: 99;
+	width:90%; font-size:1.3em; max-width:640px; 
+
+	ul{margin:0;}
+
+	li{	float:left; width:20%; margin:0; padding:1% 2% 1%; text-align: center;
+		background-color: $dark;
+
+		/*nav item for the current page*/
+		&.selected{background-color: $color-pri;}
+		&:hover{background-color:$color-pri; opacity:0.78;}
+	}
+
+}
+
+.nav-sec{
+	width:90%; max-width: 440px;float:right; margin:1em 0 0; font-size:0.8rem;
+	ul{margin:0;}
+	a:hover{color:$color-pri;}
+	li{float:left; width:20%; margin:0; padding:2% 2% 2%; text-align: right;
+	}
+}
+
+.footer-link{float:right; padding-right:5%; 
+		&:hover{text-decoration:underline;}
+	}

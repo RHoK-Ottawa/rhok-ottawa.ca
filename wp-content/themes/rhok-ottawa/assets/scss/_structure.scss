@@ -1,0 +1,90 @@
+/*********************************STRUCTURE***************************************\
+	Structure.scss include styles in header & footer
+\*********************************************************************************/
+
+/*default*/
+header, .wrap, footer{position:relative; z-index:3; width:100%; display: block;}
+header, footer{float:left;}
+.wrap {max-width:1280px; margin:0 auto;
+&.wrap-proj {float:left; max-width:1920px;}
+}
+
+
+footer{background-color:$dark; padding-bottom:2em;
+	.footer-copyright{color:$light;padding-left:2%;font-size:0.8rem; float:left; position:absolute; bottom:1em;}
+}
+
+/*homepage*/
+#rhok_brief{width:46%; padding:0 27% 0;line-height:1.6em; color:$light; 
+	text-align:center; font-size:1rem;position: absolute; top:0; margin-top:11%;
+	display: none; 
+	a{color:$color-pri;}
+	.learnmore{margin:4% 13% 0;width:66%; padding:1.5% 4% 1.5%; background-color:$color-pri-alpha; 
+		font-size:1rem; color:$light;
+		&:hover{background-color:$light; color:$color-pri;}
+	}
+}
+.pic-center{
+	width:28%; padding-top:28%; position:absolute; left:36%;
+	background-size:80%;
+	background-position:center;
+	background-repeat: no-repeat;
+	background-image:url(../images/logo1.png);
+	border-radius: 100%; margin-top:18%;
+	background-color:$color-pri-alpha;
+
+	@include trans(0.5s);
+
+	&:hover{
+		background-image:url(../images/logo2.png); background-position: center 10%; background-size: 20%;
+		background-color:$dark-alpha; 
+		border-radius: 0; width:100%; left:0;
+		}
+		
+}
+
+
+
+.pic-feature{
+	display:block;
+	width:100%; padding-top:56.25%;
+	background-size:100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-image:url(../images/gallery/pic1_color.jpg);
+
+	@include trans(0.5s);
+	&:hover{ 
+		background-image:url(../images/gallery/pic1_bw.jpg);}
+	}
+
+/*subpage: about + projects*/
+.pic-center-sub{
+	background-size:70%;
+	background-position:center;
+	background-repeat: no-repeat;
+	background-image:url(../images/picCenter-sub1.png);
+	width:100%; padding-top:32%;position: absolute; z-index:99;
+}
+.pic-feature-sub{
+	width:100%; padding-top:30%; z-index:98;
+	background-size:100%;
+	background-position:center center;
+	background-repeat: no-repeat;
+	opacity:0.8; @include filter(40%);
+
+	&.pic-feature-about{background-image:url(../images/gallery/pic3_bw.jpg);}
+	&.pic-feature-proj{background-image:url(../images/gallery/pic2_bw.jpg);}
+}
+
+
+
+
+@media only screen and (max-width:640px){
+
+	/*.wrap{background-color:#0f0;}*/
+	footer{
+		.footer-copyright{position:static;}
+	}
+
+}

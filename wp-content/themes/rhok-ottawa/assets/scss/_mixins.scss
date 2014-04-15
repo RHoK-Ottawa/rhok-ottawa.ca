@@ -1,0 +1,46 @@
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin trans($time: 1s){
+	-webkit-transition: all $time ease-out;
+    -moz-transition: all $time ease-out;
+    -o-transition: all $time ease-out;
+    transition: all $time ease-out;
+}
+
+@mixin filter($percent: 100%){
+	-webkit-filter: grayscale($percent);
+	-moz-filter: grayscale($percent);
+	-o-filter: grayscale($percent);
+	filter: grayscale($percent);
+}
+
+/*Fonts for icons*/
+
+@font-face {
+	font-family: 'ElegantIcons';
+	src:url('fonts/ElegantIcons.eot');
+	src:url('fonts/ElegantIcons.eot?#iefix') format('embedded-opentype'),
+		url('fonts/ElegantIcons.woff') format('woff'),
+		url('fonts/ElegantIcons.ttf') format('truetype'),
+		url('fonts/ElegantIcons.svg#ElegantIcons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'ElegantIcons';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
