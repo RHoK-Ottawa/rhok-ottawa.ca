@@ -637,13 +637,87 @@ footer {
   /*.wrap{background-color:#0f0;}*/
   footer .footer-copyright {
     position: static; } }
-/*preset for list and link text*/
+/* Table Styles */
 li {
   list-style: none; }
 
 a {
   text-decoration: none; }
 
+table a:link {
+  color: #666;
+  font-weight: bold;
+  text-decoration: none; }
+
+table a:visited {
+  color: #999999;
+  font-weight: bold;
+  text-decoration: none; }
+
+table a:active,
+table a:hover {
+  color: #bd5a35;
+  text-decoration: underline; }
+
+table {
+  color: #666;
+  background: #eaebec;
+  width: 100%; }
+
+table th {
+  padding: 21px 25px 22px 25px;
+  border-top: 1px solid #fafafa;
+  border-bottom: 1px solid #e0e0e0;
+  background: #ededed;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#ebebeb));
+  background: -moz-linear-gradient(top, #ededed, #ebebeb); }
+
+table th:first-child {
+  text-align: left;
+  padding-left: 20px; }
+
+table tr {
+  text-align: center;
+  padding-left: 20px; }
+
+table td:first-child {
+  text-align: left;
+  padding-left: 20px;
+  border-left: 0; }
+
+table td {
+  padding: 18px;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  border-left: 1px solid #e0e0e0;
+  background: #fafafa;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
+  background: -moz-linear-gradient(top, #fbfbfb, #fafafa); }
+
+table tr.even td {
+  background: #f6f6f6;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f6f6f6));
+  background: -moz-linear-gradient(top, #f8f8f8, #f6f6f6); }
+
+table tr:last-child td {
+  border-bottom: 0; }
+
+table tr:last-child td:first-child {
+  -moz-border-radius-bottomleft: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  border-bottom-left-radius: 3px; }
+
+table tr:last-child td:last-child {
+  -moz-border-radius-bottomright: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  border-bottom-right-radius: 3px; }
+
+table tr:hover td {
+  background: #f2f2f2;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
+  background: -moz-linear-gradient(top, #f2f2f2, #f0f0f0); }
+
+/*preset for list and link text*/
 /*=========================LAYOUT: DEFAULT===========================*/
 .col {
   padding: 1%;
@@ -762,6 +836,13 @@ section:after {
     font-size: 0.8rem; }
 
 /*=========================HOME PAGE===========================*/
+.intro {
+  margin-bottom: 2em;
+  padding-bottom: 2em;
+  border-bottom: 1px solid #ccc; }
+  .intro h1 {
+    font-size: 3em; }
+
 /*TESTIMONIALS*/
 .testimonial-article {
   position: relative;
@@ -855,8 +936,11 @@ section:after {
     width: 100%;
     padding: 0;
     font-size: 1.2rem;
-    margin: 2% 0 1%;
-    float: left; }
+    margin: 2% 0 1%; }
+    .upcoming-event-ul li:after {
+      content: "";
+      display: table;
+      clear: both; }
     .upcoming-event-ul li p {
       padding-top: 2%; }
     .upcoming-event-ul li .event-schedule {
@@ -879,13 +963,12 @@ section:after {
       font-size: 2.4rem; }
 
 .register-btn {
-  float: left;
   background-color: #f25a3b;
-  width: 77%;
-  padding: 5% 10% 5%;
-  margin: 0 10% 0 3%;
+  padding: 2.5% 5% 2.55%;
   font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.6); }
+  color: rgba(255, 255, 255, 0.6);
+  display: block;
+  text-align: center; }
   .register-btn .register-btn-em {
     text-transform: uppercase;
     color: white; }
