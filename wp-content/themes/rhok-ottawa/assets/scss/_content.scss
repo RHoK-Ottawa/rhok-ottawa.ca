@@ -1,3 +1,11 @@
+a{
+	color:#f25a3b;
+	&:hover{
+		color:#36acc7;
+		text-decoration:underline;
+	}
+}
+
 /* Table Styles */
 li{ list-style: none;} a{text-decoration: none;} 
 
@@ -230,7 +238,9 @@ section{
 
 	.register-btn-em{text-transform: uppercase; color:$light;}
 
-	&:hover{background-color:$dark;
+	&:hover{
+		background-color:$dark;
+		color:#fff;
 		.register-btn-em{color:$color-pri;}
 	}
 }

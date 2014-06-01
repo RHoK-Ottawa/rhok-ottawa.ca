@@ -8,20 +8,19 @@ Template Name: Home
 
 <!-- Banner -->
 <header>
-	<div class="pic-center"><div id="rhok_brief"><span><a href="http://www.rhok.org/">Random Hacks of Kindness | RHoK</a></span><br>is a global initiative to make the world a better place by developing solutions in response to challenges facing humanity<a href="http://www.rhok.org/solutions" target="_blank" class="rohklink" ><div class="learnmore">Check out the past RHoK projects</div></a></div></div>
+	<div class="pic-center"><div id="rhok_brief"><span><a href="http://www.rhok.org/">Random Hacks of Kindness | RHoK</a></span></div></div>
 	<div class="pic-feature"></div>
 </header>
 
 <!-- Template Container -->
 <div class="wrap">
 
-
 	<section class="col col-2of3">
 		<div class="intro">
 			<h1>Join us for a Hackathon here in Ottawa June 27-29th, 2014</h1>
 			<p>We'll be working to build solutions to address challenges faced by non-profits, humanitarian and community organizations.</p>
 			<p><strong>Interested in participating?</strong></p>
-			<a class="register-btn" href="https://www.eventbrite.ca/e/rhok-ottawa-june-2014-tickets-11722172333">Sign up</a>
+			<a href="https://www.eventbrite.ca/e/rhok-ottawa-june-2014-tickets-11722172333" class="register-btn"><span class="register-btn-em">Sing up</span> for the <br>next <span class="register-btn-em">hackathon</span></a>
 		</div>
 		<h1>Frequently Asked Questions</h1>
 		<h2>What is a Hackathon?</h2>
@@ -46,7 +45,7 @@ Template Name: Home
 			<li class="event-time"><span data-icon="&#x7d;"></span><p>Friday 07:30 - Sunday 18:00</p> <p class="event-schedule"><a href="" >See full schedule</a></p></li>
 			<li class="event-location"><span data-icon="&#xe081;"></span><p>The Shopify Lodge, 126 York Street</p></li>
 		</ul>
-		<a class="register-btn"><span class="register-btn-em">Sing up</span> for the <br>next <span class="register-btn-em">hackathon</span></a>
+		<a href="https://www.eventbrite.ca/e/rhok-ottawa-june-2014-tickets-11722172333" class="register-btn"><span class="register-btn-em">Sing up</span> for the <br>next <span class="register-btn-em">hackathon</span></a>
 	</section>
 
 	<!-- Sponsors -->

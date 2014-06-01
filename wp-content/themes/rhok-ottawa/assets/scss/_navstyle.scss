@@ -1,8 +1,14 @@
-nav a{color:$light; text-transform: uppercase;
+nav a{
+	color:$light; text-transform: uppercase;
 
-	&.rohklink{text-transform: capitalize; 
-	 span{color:$color-pri; text-transform: uppercase;}}
-	}
+	&:hover{ color:#fff; }
+	&.rohklink{
+		text-transform: capitalize; 
+	 	span{color:$color-pri; text-transform: uppercase;}
+	 }
+	
+}
+
 
 nav {font-family: $font-sec;}
 

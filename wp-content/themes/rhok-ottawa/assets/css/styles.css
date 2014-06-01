@@ -452,6 +452,8 @@ body {
 nav a {
   color: white;
   text-transform: uppercase; }
+  nav a:hover {
+    color: #fff; }
   nav a.rohklink {
     text-transform: capitalize; }
     nav a.rohklink span {
@@ -576,19 +578,7 @@ footer {
   background-image: url(../images/logo1.png);
   border-radius: 100%;
   margin-top: 18%;
-  background-color: rgba(242, 90, 59, 0.6);
-  -webkit-transition: all 0.5s ease-out;
-  -moz-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out; }
-  .pic-center:hover {
-    background-image: url(../images/logo2.png);
-    background-position: center 10%;
-    background-size: 20%;
-    background-color: rgba(0, 0, 0, 0.76);
-    border-radius: 0;
-    width: 100%;
-    left: 0; }
+  background-color: rgba(242, 90, 59, 0.6); }
 
 .pic-feature {
   display: block;
@@ -597,13 +587,7 @@ footer {
   background-size: 100%;
   background-position: center center;
   background-repeat: no-repeat;
-  background-image: url(../images/gallery/pic1_color.jpg);
-  -webkit-transition: all 0.5s ease-out;
-  -moz-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out; }
-  .pic-feature:hover {
-    background-image: url(../images/gallery/pic1_bw.jpg); }
+  background-image: url(../images/gallery/pic1_color.jpg); }
 
 /*subpage: about + projects*/
 .pic-center-sub {
@@ -637,6 +621,12 @@ footer {
   /*.wrap{background-color:#0f0;}*/
   footer .footer-copyright {
     position: static; } }
+a {
+  color: #f25a3b; }
+  a:hover {
+    color: #36acc7;
+    text-decoration: underline; }
+
 /* Table Styles */
 li {
   list-style: none; }
@@ -973,7 +963,8 @@ section:after {
     text-transform: uppercase;
     color: white; }
   .register-btn:hover {
-    background-color: black; }
+    background-color: black;
+    color: #fff; }
     .register-btn:hover .register-btn-em {
       color: #f25a3b; }
 

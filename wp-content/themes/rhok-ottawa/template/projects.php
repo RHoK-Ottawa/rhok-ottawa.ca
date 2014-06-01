@@ -32,7 +32,6 @@ Template Name: Projects
 		?>	
 
 			<article class="proj-item">
-				<div class="proj-traceline"></div>
 				<div class="proj-img col-1of3"><a href="" target="_blank"><?php the_post_thumbnail(); ?></a></div>
 				<div class="proj-detail col-2of3">
 					<h2 class="proj-detail-name"><?php the_title(); ?></h2>
