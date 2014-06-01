@@ -22,6 +22,8 @@
 	Theme specific settings
 
 	Uncomment register_nav_menus to enable a single menu with the title of "Primary Navigation" in your theme
+
+
 	
 	======================================================================================================================== */
 
@@ -38,6 +40,15 @@
 	add_action( 'wp_enqueue_scripts', 'starkers_script_enqueuer' );
 
 	add_filter( 'body_class', array( 'Starkers_Utilities', 'add_slug_to_body_class' ) );
+
+	function custom_excerpt_length( $length ) {
+		return 20;
+	}
+	add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+	function new_excerpt_more( $more ) {
+		return '';
+	}
+	add_filter('excerpt_more', 'new_excerpt_more');
 
 	/* ========================================================================================================================
 	

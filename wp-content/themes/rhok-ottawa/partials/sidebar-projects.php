@@ -1,3 +1,8 @@
+<?php 
+// Filter to query the project date.
+$category_year = '2013-winter';
+?>
+
 <section class="col col-1of3">
 	<h1 class="section-title">Projects</h1>
 	<?php
@@ -10,7 +15,7 @@
 				array(
 					'taxonomy' => 'project-year',
 					'field' => 'slug',
-					'terms' => '2013-winter'
+					'terms' => $category_year
 				)
 			)
 		);

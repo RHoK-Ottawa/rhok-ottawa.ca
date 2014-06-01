@@ -1,7 +1,7 @@
 <footer>
 	<nav class="nav-sec">
 		<ul class="nav-sec-list">
-			<?php wp_list_pages('title_li='); ?>
+			<?php wp_list_pages(array('title_li' => '', 'exclude' => '48')); ?>
 		</ul>
 		<p class="footer-link"><a href="http://www.rhok.org/" class="rohklink">Learn more about <span>Hackathon</span></p>
 	</nav>
