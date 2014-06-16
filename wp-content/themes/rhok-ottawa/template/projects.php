@@ -36,6 +36,7 @@ $category_year = '2014-summer';
 			$loop = new WP_Query( $args );
 			while ( $loop->have_posts() ) : $loop->the_post();
 
+			$organizationDescription = types_render_field("organization-description", array());
 			$liveURL = types_render_field("live-site", array("raw"=>"true","separator"=>";"));
 			$repositoryURL = types_render_field("repository", array("raw"=>"true","separator"=>";"));
 		?>	
@@ -50,7 +51,7 @@ $category_year = '2014-summer';
 					<?php if($repositoryURL){ ?>
 						<a href="<?= $repositoryURL ?>">Repository</a> 
 					<?php } ?>
-					<?php the_content(); ?>
+					<?php echo $organizationDescription; ?>
 				</div>
 			</article>
 		<?php		
@@ -98,7 +99,7 @@ $category_year = '2014-summer';
 					<?php if($repositoryURL){ ?>
 						<a href="<?= $repositoryURL ?>">Repository</a> 
 					<?php } ?>
-					<?php the_content(); ?>
+					<?php echo $organizationDescription; ?>
 				</div>
 			</article>
 		<?php		
