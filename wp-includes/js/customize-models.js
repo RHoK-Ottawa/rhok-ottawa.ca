@@ -1,4 +1,4 @@
-/* globals _wpCustomizeHeader */
+/* globals _wpCustomizeHeader, _ */
 (function( $, wp ) {
 	var api = wp.customize;
 	api.HeaderTool = {};
@@ -113,6 +113,10 @@
 				return false;
 			}
 
+			if (this.get('imageWidth') <= this.get('themeWidth')) {
+				return false;
+			}
+
 			return true;
 		}
 	});
@@ -142,7 +146,7 @@
 			}
 
 			// Overridable by an extending class
-			if (!this.data) {
+			if (typeof this.data === 'undefined') {
 				this.data = _wpCustomizeHeader.uploads;
 			}
 

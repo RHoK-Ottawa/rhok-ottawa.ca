@@ -1,9 +1,8 @@
 <?php 
 // Filter to query the project date.
-$category_year = '2013-winter';
+$category_year = '2014-summer';
 ?>
 
-<section class="col col-1of3">
 	<h1 class="section-title">Projects</h1>
 	<?php
 		$args = array( 
@@ -35,9 +34,8 @@ $category_year = '2013-winter';
 					<li class="archive-proj-links-code"><a href="<?= $repositoryURL ?>">Repository</a></li>
 				<?php } ?>
 				</ul>
-				<?php the_excerpt(); ?>
+				<?php the_content(); ?>
 		</article>
 	<?php		
 		endwhile;
 	?>
-</section>

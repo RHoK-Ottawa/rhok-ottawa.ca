@@ -2175,7 +2175,7 @@
 					library:        options.selection,
 					editing:        options.editing,
 					menu:           'video-playlist',
-					dragInfoText:   l10n.playlistDragInfo,
+					dragInfoText:   l10n.videoPlaylistDragInfo,
 					dragInfo:       false
 				}),
 
@@ -3270,6 +3270,7 @@
 		localDrag: false,
 		overContainer: false,
 		overDropzone: false,
+		draggingFile: null,
 
 		initialize: function() {
 			var self = this;
@@ -3309,6 +3310,21 @@
 			return supports;
 		},
 
+		isDraggingFile: function( event ) {
+			if ( this.draggingFile !== null ) {
+				return this.draggingFile;
+			}
+
+			if ( _.isUndefined( event.originalEvent ) || _.isUndefined( event.originalEvent.dataTransfer ) ) {
+				return false;
+			}
+
+			this.draggingFile = _.indexOf( event.originalEvent.dataTransfer.types, 'Files' ) > -1 &&
+				_.indexOf( event.originalEvent.dataTransfer.types, 'text/plain' ) === -1;
+
+			return this.draggingFile;
+		},
+
 		refresh: function( e ) {
 			var dropzone_id;
 			for ( dropzone_id in this.dropzones ) {
@@ -3318,6 +3334,10 @@
 
 			if ( ! _.isUndefined( e ) ) {
 				$( e.target ).closest( '.uploader-editor' ).toggleClass( 'droppable', this.overDropzone );
+			}
+
+			if ( ! this.overContainer && ! this.overDropzone ) {
+				this.draggingFile = null;
 			}
 
 			return this;
@@ -3383,8 +3403,8 @@
 			return this;
 		},
 
-		containerDragover: function() {
-			if ( this.localDrag ) {
+		containerDragover: function( event ) {
+			if ( this.localDrag || ! this.isDraggingFile( event ) ) {
 				return;
 			}
 
@@ -3399,13 +3419,13 @@
 			_.delay( _.bind( this.refresh, this ), 50 );
 		},
 
-		dropzoneDragover: function( e ) {
-			if ( this.localDrag ) {
+		dropzoneDragover: function( event ) {
+			if ( this.localDrag || ! this.isDraggingFile( event ) ) {
 				return;
 			}
 
 			this.overDropzone = true;
-			this.refresh( e );
+			this.refresh( event );
 			return false;
 		},
 
@@ -6226,7 +6246,7 @@
 		events: _.defaults( media.view.Settings.AttachmentDisplay.prototype.events, {
 			'click .edit-attachment': 'editAttachment',
 			'click .replace-attachment': 'replaceAttachment',
-			'click .advanced-toggle': 'toggleAdvanced',
+			'click .advanced-toggle': 'onToggleAdvanced',
 			'change [data-setting="customWidth"]': 'onCustomSize',
 			'change [data-setting="customHeight"]': 'onCustomSize',
 			'keyup [data-setting="customWidth"]': 'onCustomSize',
@@ -6238,6 +6258,7 @@
 			this.listenTo( this.model, 'change:url', this.updateUrl );
 			this.listenTo( this.model, 'change:link', this.toggleLinkSettings );
 			this.listenTo( this.model, 'change:size', this.toggleCustomSize );
+
 			media.view.Settings.AttachmentDisplay.prototype.initialize.apply( this, arguments );
 		},
 
@@ -6277,6 +6298,9 @@
 		postRender: function() {
 			setTimeout( _.bind( this.resetFocus, this ), 10 );
 			this.toggleLinkSettings();
+			if ( getUserSetting( 'advImgDetails' ) === 'show' ) {
+				this.toggleAdvanced( true );
+			}
 			this.trigger( 'post-render' );
 		},
 
@@ -6329,16 +6353,26 @@
 			}
 		},
 
-		toggleAdvanced: function( event ) {
-			var $advanced = $( event.target ).closest( '.advanced-section' );
+		onToggleAdvanced: function( event ) {
 			event.preventDefault();
-			if ( $advanced.hasClass('advanced-visible') ) {
+			this.toggleAdvanced();
+		},
+
+		toggleAdvanced: function( show ) {
+			var $advanced = this.$el.find( '.advanced-section' ),
+				mode;
+
+			if ( $advanced.hasClass('advanced-visible') || show === false ) {
 				$advanced.removeClass('advanced-visible');
 				$advanced.find('.advanced-settings').addClass('hidden');
+				mode = 'hide';
 			} else {
 				$advanced.addClass('advanced-visible');
 				$advanced.find('.advanced-settings').removeClass('hidden');
+				mode = 'show';
 			}
+
+			setUserSetting( 'advImgDetails', mode );
 		},
 
 		editAttachment: function( event ) {

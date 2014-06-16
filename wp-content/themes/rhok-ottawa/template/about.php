@@ -29,7 +29,9 @@ Template Name: About
 		<?php endif; ?>
 	</section>
 
-	<?php include( get_stylesheet_directory() . '/partials/sidebar-projects.php'); ?>
+	<section class="col col-1of3">
+		<?php include( get_stylesheet_directory() . '/partials/sidebar-projects.php'); ?>
+	</section>
 
 </div> <!-- Template Container -->
 

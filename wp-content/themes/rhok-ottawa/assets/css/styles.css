@@ -1,3 +1,6 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+@import url(http://fonts.googleapis.com/css?family=Quicksand:300,400,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700);
 /*! normalize.css 2012-03-11T12:53 UTC - http://github.com/necolas/normalize.css */
 /* =============================================================================
    HTML5 display definitions
@@ -5,9 +8,6 @@
 /*
  * Corrects block display not defined in IE6/7/8/9 & FF3
  */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
-@import url(http://fonts.googleapis.com/css?family=Quicksand:300,400,700);
-@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700);
 article,
 aside,
 details,
@@ -430,6 +430,7 @@ table {
   src: url("fonts/ElegantIcons.eot?#iefix") format("embedded-opentype"), url("fonts/ElegantIcons.woff") format("woff"), url("fonts/ElegantIcons.ttf") format("truetype"), url("fonts/ElegantIcons.svg#ElegantIcons") format("svg");
   font-weight: normal;
   font-style: normal; }
+
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
   font-family: 'ElegantIcons';
@@ -988,6 +989,9 @@ section:after {
       width: 90%;
       height: auto;
       max-width: 220px; }
+
+.archive-proj h3 {
+  font-size: 80%; }
 
 /*=========================Projects PAGE===========================*/
 .proj-item {

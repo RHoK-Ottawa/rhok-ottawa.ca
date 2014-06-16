@@ -3,7 +3,7 @@
 Template Name: Projects
 */
 // Filter to query the project date.
-$category_year = '2013-winter';
+$category_year = '2014-summer';
 ?>
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
@@ -70,6 +70,8 @@ $category_year = '2013-winter';
 				'posts_per_page' => 10,
 				'paged' => get_query_var('page'),
 				'meta_key' => 'wpcf-live-site',
+				'order' => 'ASC',
+				'orderby' => 'name',
 				'tax_query' => array(
 						array(
 							'taxonomy' => 'project-year',

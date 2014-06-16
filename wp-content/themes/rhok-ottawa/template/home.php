@@ -20,7 +20,7 @@ Template Name: Home
 			<h1>Join us for a Hackathon here in Ottawa June 27-29th, 2014</h1>
 			<p>We'll be working to build solutions to address challenges faced by non-profits, humanitarian and community organizations.</p>
 			<p><strong>Interested in participating?</strong></p>
-			<a href="https://www.eventbrite.ca/e/rhok-ottawa-june-2014-tickets-11722172333" class="register-btn"><span class="register-btn-em">Sing up</span> for the <br>next <span class="register-btn-em">hackathon</span></a>
+			<a href="https://www.eventbrite.ca/e/rhok-ottawa-june-2014-tickets-11722172333" class="register-btn"><span class="register-btn-em">Sign up</span> for the <br>next <span class="register-btn-em">hackathon</span></a>
 		</div>
 		<h1>Frequently Asked Questions</h1>
 		<h2>What is a Hackathon?</h2>
@@ -42,10 +42,12 @@ Template Name: Home
 		<h1 class="section-title">Upcoming</h1>
 		<ul class="upcoming-event-ul">
 			<li class="event-date"><span data-icon="&#xe023;"></span><p>June 13 - June 15, 2014</p></li>
-			<li class="event-time"><span data-icon="&#x7d;"></span><p>Friday 07:30 - Sunday 18:00</p> <p class="event-schedule"><a href="" >See full schedule</a></p></li>
-			<li class="event-location"><span data-icon="&#xe081;"></span><p>The Shopify Lodge, 126 York Street</p></li>
+			<li class="event-time"><span data-icon="&#x7d;"></span><p>Friday 19:30 - Sunday 18:00</p> <p class="event-schedule"><a href="http://beta.rhok-ottawa.ca/?page_id=43" >See full schedule</a></p></li>
+			<li class="event-location"><span data-icon="&#xe081;"></span><p><a href="https://www.google.com/maps/place/126+York+St/@45.4292652,-75.6900505,17z">The Shopify Lounge, 126 York Street</a></p></li>
 		</ul>
-		<a href="https://www.eventbrite.ca/e/rhok-ottawa-june-2014-tickets-11722172333" class="register-btn"><span class="register-btn-em">Sing up</span> for the <br>next <span class="register-btn-em">hackathon</span></a>
+		<a href="https://www.eventbrite.ca/e/rhok-ottawa-june-2014-tickets-11722172333" class="register-btn"><span class="register-btn-em">Sign up</span> for the <br>next <span class="register-btn-em">hackathon</span></a>
+
+	<?php include( get_stylesheet_directory() . '/partials/sidebar-projects.php'); ?>
 	</section>
 
 	<!-- Sponsors -->
