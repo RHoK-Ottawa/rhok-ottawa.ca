@@ -31,7 +31,7 @@ Template Name: Home
 		<h3>Do I have to be a "hacker" to participate?</h3>
 		<p>Not at all! Building great software requires designers, developers and people who are familiar with the problems we are solving, but most importantly we need people who are passionate about solving problems.</p>
 		<h3>Do I have to have a lot of experience?</h3>
-		<p>No! Hackathons are a great way to learn from people with more experience or to learn from people who have skills completely different from your own. If you are just getting started with CSS or want to know more about web pages we want you there</p>
+		<p>No! Hackathons are a great way to learn from people with more experience or to learn from people who have skills completely different from your own. If you are just getting started with CSS or want to know more about web pages we want you there.</p>
 		<h3>What do I need to bring?</h3>
 		<p>We strongly recommend that you bring a laptop, since we are building software at the event, but it's not absolutely essential.</p>
 		<h3>What do you expect people to build in a weekend?</h3>
