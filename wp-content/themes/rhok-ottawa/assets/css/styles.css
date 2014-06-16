@@ -588,7 +588,7 @@ footer {
   background-size: 100%;
   background-position: center center;
   background-repeat: no-repeat;
-  background-image: url(../images/gallery/picCenter-sub1_color.jpg); }
+  background-image: url(../images/gallery/pic1_color.jpg); }
 
 /*subpage: about + projects*/
 .pic-center-sub {
@@ -921,7 +921,7 @@ section:after {
 
 /*Upcoming Events*/
 .upcoming-event-ul {
-  margin: 0 0 1em;
+  margin: 0;
   padding: 0; }
   .upcoming-event-ul li {
     width: 100%;
@@ -933,8 +933,9 @@ section:after {
       display: table;
       clear: both; }
     .upcoming-event-ul li p {
-      padding-top: 2%; margin: 10px 0 0;}
+      padding-top: 2%; }
     .upcoming-event-ul li .event-schedule {
+      float: right;
       padding-top: 0;
       margin-top: 0;
       font-size: 1rem;
@@ -947,10 +948,9 @@ section:after {
           color: #36acc7; }
     .upcoming-event-ul li span {
       float: left;
-      min-width: 40px;
       width: 10%;
-      padding-right: 5%;
-      height: 1.5em;
+      padding: 4% 10% 0 0;
+      height: 2.4em;
       font-size: 2.4rem; }
 
 .register-btn {
