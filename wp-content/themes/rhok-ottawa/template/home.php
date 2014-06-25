@@ -45,12 +45,24 @@ Template Name: Home
 		<div class="section-center-title"><h1 class="section-title">Meet our sponsors</h1></div>
 		<ul class="col col-1 sponsorlist">
 			<?php
+
+
 			$args = array( 'post_type' => 'sponsor', 'posts_per_page' => 10 );
 			$loop = new WP_Query( $args );
 			while ( $loop->have_posts() ) : $loop->the_post();
-				echo '<li><a href="">';
+
+				$sponsorLink = types_render_field("sponsor-link", array("raw"=>"true","separator"=>";"));
+
+				echo '<li>';
+				if($sponsorLink){
+					echo '<a target="_blank" href="' . $sponsorLink . '">';
+				} 
 				the_post_thumbnail();
-				echo '</a></li>';
+				if($sponsorLink){
+					echo '</a>';
+				}
+				echo '</li>';
+				
 			endwhile;
 			?>
 		</ul>
